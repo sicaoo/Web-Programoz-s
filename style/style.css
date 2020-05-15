@@ -118,6 +118,7 @@ ol li
 
 }
 
+
 #logo
 { width: 860px;
   position: relative;
@@ -353,3 +354,30 @@ table tr td
 { background: #E5E5DB;
   color: #47433F;
   border-top: 1px solid #FFF;}
+  
+
+
+.a{
+		border:1px solid #808080;
+		padding:10px;
+		float:center;
+		text-align:center;
+		line-height:150%;
+		
+
+		}
+		.b{
+			background-color:#90ee90;
+			border:1px solid #808080;
+			margin 5px;
+		}
+		.b img {
+		
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		}
+		img:hover {
+		box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+		}
