@@ -110,7 +110,7 @@ while ($row = mysql_fetch_assoc($resultname)) {
 $description = array();
 $resultdescription = mysql_query("SELECT description FROM product");
 while ($row = mysql_fetch_assoc($resultdescription)) {
-   $description= array_merge($description, array_map('trim', explode(",", $row['description']))); //descriptionto array
+   $description= array_merge($description, array_map('trim', explode(";", $row['description']))); //descriptionto array
 }
 $price = array();
 $resultprice = mysql_query("SELECT price FROM product");
