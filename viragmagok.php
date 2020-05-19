@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +32,7 @@
             <ul id="menu">
                 <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
                 <li><a href="index.php">Kezdőoldal</a></li>
-                <li><a href="akciok.html">Akciók</a></li>
+                <li><a href="akciok.php">Akciók</a></li>
                 <li><a href="news.php">Újdonságok</a></li>
                 <li><a href="order.php">Megrendelés</a></li>
                 <li><a href="contact.php">Kontakt</a></li>
@@ -49,23 +50,55 @@
             </form>
             <h1>Kategóriák</h1>
             <ul>
-                <li><a href="#">Virágmagok</a></li>
-                <li><a href="#">Vetőmagok</a></li>
-                <li><a href="#">Kaktuszok</a></li>
-                <li><a href="#">Fák</a></li>
+                <li><a href="viragmagok.php">Virágmagok</a></li>
+                <li><a href="vetomagok.php">Vetőmagok</a></li>
+                <li><a href="kaktuszok.php">Kaktuszok</a></li>
+                <li><a href="fak.php">Fák</a></li>
             </ul>
 
 
 
         </div>
         <div id="content">
-        <?php
-        include "db_config.php";
+        <?php  require_once 'db.php';
+
+
+
+        echo"<div id=\"viragmagok\">";
+        $j=count($id);
+        for ($i=0; $i<$j ; $i++)
+        {
+
+
+            if ($product_type[$i]=='virágmag'){
+                echo "<div class=\"b\">";
+                $db = mysqli_connect("localhost","root","","eden");
+                $sql = "SELECT id,file FROM images WHERE id=$i";
+                $sth = $db->query($sql);
+                $image=array();
+                $result=mysqli_fetch_array($sth);
+                echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['file'] ).'" />';
+                echo "</div>";
+
+                echo "<div class=\"a\">";
+                echo "A termék kódja:".$id[$i]. "<br> ";
+                echo "Neve:".$name[$i] . "<br>";
+                echo "Leírás:".$description[$i]. "<br>";
+                echo "Ára:".$price[$i]. "rsd  <br>";
+                echo "Raktáron:".$discount[$i]. "<br>";
+                echo "<br>";
+                echo "</div>";
+
+            }
+        }
+        echo "</div>";
+
+
         ?>
         </div>
     </div>
     <div id="footer">
-        <p><a href="index.php">Kezdőoldal</a> | <a href="akciok.html">Akciók</a> | <a href="news.php">Újdonságok</a> | <a href="order.php">Megrendelés</a> | <a href="contact.php">Kontakt</a></p>
+        <p><a href="index.php">Kezdőoldal</a> | <a href="akciok.php">Akciók</a> | <a href="news.php">Újdonságok</a> | <a href="order.php">Megrendelés</a> | <a href="contact.php">Kontakt</a></p>
         <p>Copyright &copy; éden </p>
     </div>
 </div>
