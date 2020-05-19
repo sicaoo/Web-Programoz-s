@@ -30,7 +30,7 @@
                 <li class="selected"><a href="index.php">Kezdőoldal</a></li>
                 <li><a href="akciok.php">Akciók</a></li>
                 <li><a href="news.php">Újdonságok</a></li>
-                <li><a href="order">Megrendelés</a></li>
+                <li><a href="order.php">Megrendelés</a></li>
                 <li><a href="contact.php">Kontakt</a></li>
             </ul>
         </div>
@@ -47,14 +47,11 @@
             <h1>Kategóriák</h1>
             <ul>
                 <li><a href="viragmagok.php">Virágmagok</a></li>
-                <li><a href="#">Vetőmagok</a></li>
-                <li><a href="#">Kaktuszok</a></li>
-                <li><a href="#">Fák</a></li>
+                <li><a href="vetomagok.php">Vetőmagok</a></li>
+                <li><a href="kaktuszok.php">Kaktuszok</a></li>
+                <li><a href="fak.php">Fák</a></li>
             </ul>
-            <h1>Latest News</h1>
-            <h4>New Website Launched</h4>
-            <h5>January 1st, 2010</h5>
-            <p>2010 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
+
 
 
         </div>
@@ -76,6 +73,13 @@
             <div class="contentcont">
             <img src="style/8807.png" alt="email" width="100px" height="100px">
                 <span><br>eden@gmail.com</span></div>
+            <div class="contentcont">
+                <img src="style/open1.png" alt="open" width="100px" height="100px">
+
+                <span><br>Hetköznapokon: 8:00-16:00</span></div>
+            <div class="contentcont">
+                <img src="style/delivery.png" alt="open" width="100px" height="100px">
+                <span>Szállítasi idő: 2-3 nap<br> Szállítási díj</span></div>
 
         </div>
     </div>
