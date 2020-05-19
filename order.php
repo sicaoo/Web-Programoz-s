@@ -53,7 +53,7 @@
             <ul id="menu">
                 <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
                 <li class="selected"><a href="index.php">Kezdőoldal</a></li>
-                <li><a href="akciok.html">Akciók</a></li>
+                <li><a href="akciok.php">Akciók</a></li>
                 <li><a href="news.php">Újdonságok</a></li>
                 <li><a href="order.php">Megrendelés</a></li>
                 <li><a href="contact.php">Kontakt</a></li>
@@ -72,35 +72,31 @@
             <h1>Kategóriák</h1>
             <ul>
                 <li><a href="viragmagok.php">Virágmagok</a></li>
-                <li><a href="#">Vetőmagok</a></li>
-                <li><a href="#">Kaktuszok</a></li>
-                <li><a href="#">Fák</a></li>
+                <li><a href="vetomagok.php">Vetőmagok</a></li>
+                <li><a href="kaktuszok.php">Kaktuszok</a></li>
+                <li><a href="fak.php">Fák</a></li>
             </ul>
-            <h1>Latest News</h1>
-            <h4>New Website Launched</h4>
-            <h5>January 1st, 2010</h5>
-            <p>2010 sees the redesign of our website. Take a look around and let us know what you think.<br /><a href="#">Read more</a></p>
 
 
         </div>
         <div id="content">
-            <form id="urlap">
+            <form id="urlap" method="post" action="db.php" >
                 <fieldset>
-                    <legend>Személyes adatok</legend>
+                    <legend><h1 style="color: #B30000;">Személyes adatok</h1></legend>
                     <label for="first_name">Keresztnév: </label><input type="text" id="first_name" name="first_name"  onchange="myFunction(this)" onfocus="turnToYellow(this)" >*<span id="first_name_error" class="error"></span><br><br>
                     <label for="last_name">Vezetéknév: </label><input type="text" id="last_name" name="last_name"  onchange="myFunction(this)" onfocus="turnToYellow(this)">*<span id="last_name_error" class="error"></span><br><br>
                     <label for="address">Lakcím: </label><input type="text" id="address" name="address"  onchange="myFunction(this)" onfocus="turnToYellow(this)">*<span id="address_error" class="error" ></span><br><br>
                     <label for="email">E-mail cím: </label><input type="email" id="email" name="email" onchange="myFunction(this)" onfocus="turnToYellow(this)">*<span id="email_error" class="error"  ></span><br><br>
                     <label for="telephone">Telefon: </label><input type="text" id="telephone" name="telephone"  onchange="myFunction(this)" onfocus="turnToYellow(this)">*<span id="telephone_error" class="error"></span><br><br>
 
-                    <input type="submit" name="sg" value="Küld">
+                    <input type="submit" id="submit" name="sg" value="Küld">
                     <input type="reset" name="rg" value="Mégse">
                 </fieldset>
 
                 <br><br>
 
                 <fieldset>
-                    <legend>Komment</legend>
+                    <legend><h1 style="color: #B30000;">Komment</h1></legend>
                     <textarea name="comment" id="comment" rows="10" cols="50"></textarea>
                     <br>
                     <input type="submit" name="sg" value="Küld">
@@ -110,7 +106,7 @@
         </div>
     </div>
     <div id="footer">
-        <p><a href="index.php">Kezdőoldal</a> | <a href="akciok.html">Akciók</a> | <a href="news.php">Újdonságok</a> | <a href="order.php">Megrendelés</a> | <a href="contact.php">Kontakt</a></p>
+        <p><a href="index.php">Kezdőoldal</a> | <a href="akciok.php">Akciók</a> | <a href="news.php">Újdonságok</a> | <a href="order.php">Megrendelés</a> | <a href="contact.php">Kontakt</a></p>
         <p>Copyright &copy; éden </p>
     </div>
 </div>
