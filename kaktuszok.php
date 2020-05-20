@@ -70,26 +70,46 @@
 
 
                 if ($product_type[$i]=='kaktusz'){
+
                     echo "<div class=\"b\">";
                     $db = mysqli_connect("localhost","root","","eden");
                     $sql = "SELECT id,file FROM images WHERE id=$i";
                     $sth = $db->query($sql);
                     $image=array();
                     $result=mysqli_fetch_array($sth);
-                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['file'] ).'" />';
+                    echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['file'] ).'" /></h6>';
                     echo "</div>";
 
-                    echo "<div class=\"a\">";
-                    echo "A termék kódja:".$id[$i]. "<br> ";
-                    echo "Neve:".$name[$i] . "<br>";
-                    echo "Leírás:".$description[$i]. "<br>";
-                    echo "Ára:".$price[$i]. "rsd  <br>";
-                    echo "Raktáron:".$discount[$i]. "<br>";
-                    echo "<br>";
-                    echo "</div>";
+
+                    echo "<table>";
+                    echo "<tr>";
+                    echo "<td>";
+                    echo"A termék kódja: ".$id[$i];
+                    echo "</td>";
+                    echo "<td>";
+                    echo "Neve: ".$name[$i];
+                    echo "</td>";
+                    echo "</tr>";
+                    echo"<tr>";
+                    echo "<td>";
+                    echo "Ára:".$price[$i]. " rsd";
+                    echo "</td>";
+                    echo "<td>";
+                    echo "Raktáron:".$discount[$i];
+                    echo "</td>";
+                    echo "</tr>";
+                    echo"<tr>";
+                    echo "<td colspan='2'>";
+                    echo "<a href='#'  >Bővebben</a>";
+                    echo "</td>";
+
+                    echo "</tr>";
+
+                    echo "</table>";
 
                 }
             }
+
             echo "</div>";
 
 
