@@ -37,7 +37,7 @@ var checkForm = function() {
         isValid = false;
     }
     if ($('telephone').value == '') {
-        $('password_error').innerHTML = 'Kötelező kitölteni';
+        $('telephone_error').innerHTML = 'Kötelező kitölteni';
         document.getElementById("telephone").style.borderColor = "grey";
         isValid = false;
     }
