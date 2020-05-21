@@ -80,7 +80,7 @@
 
         </div>
         <div id="content">
-            <form id="urlap" method="post" action="db.php" >
+            <form action="register.php"  method="post">
                 <fieldset>
                     <legend><h1 style="color: #B30000;">Személyes adatok</h1></legend>
                     <label for="first_name">Keresztnév: </label><input type="text" id="first_name" name="first_name"  onchange="myFunction(this)" onfocus="turnToYellow(this)" >*<span id="first_name_error" class="error"></span><br><br>
@@ -88,13 +88,10 @@
                     <label for="address">Lakcím: </label><input type="text" id="address" name="address"  onchange="myFunction(this)" onfocus="turnToYellow(this)">*<span id="address_error" class="error" ></span><br><br>
                     <label for="email">E-mail cím: </label><input type="email" id="email" name="email" onchange="myFunction(this)" onfocus="turnToYellow(this)">*<span id="email_error" class="error"  ></span><br><br>
                     <label for="telephone">Telefon: </label><input type="text" id="telephone" name="telephone"  onchange="myFunction(this)" onfocus="turnToYellow(this)">*<span id="telephone_error" class="error"></span><br><br>
-
                     <input type="submit" id="submit" name="sg" value="Küld">
                     <input type="reset" name="rg" value="Mégse">
                 </fieldset>
-
                 <br><br>
-
                 <fieldset>
                     <legend><h1 style="color: #B30000;">Komment</h1></legend>
                     <textarea name="comment" id="comment" rows="10" cols="50"></textarea>
@@ -103,6 +100,7 @@
                     <input type="reset" name="rg" value="Mégse">
                 </fieldset>
             </form>
+            
         </div>
     </div>
     <div id="footer">
