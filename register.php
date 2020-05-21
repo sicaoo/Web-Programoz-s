@@ -14,5 +14,5 @@
 	$queryreg = mysql_query("INSERT INTO member (first_name, address , last_name, email, telephone)
 			VALUES ('$first_name','$address','$last_name', '$email', '$telephone')");
 	}
-	echo "adatait sikeresen felvettuk";
+	echo '<script>alert("Adatait sikeresen felvettük")</script>';
 ?>
